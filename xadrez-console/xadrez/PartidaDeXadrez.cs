@@ -47,6 +47,12 @@ namespace xadrez
                 throw new TabuleiroException("Não há movimentos possíveis para a peça de origem escolhida! Pressione enter para tentar novamente");
         }
 
+        public void validarPosicaoDeDestino(Posicao origem, Posicao destino)
+        {
+            if (!tab.peca(origem).podeMoverPara(destino))
+                throw new TabuleiroException("Posição de destino inválida! Pressione enter para tentar novamente");
+        }
+
         private void mudaJogador()
         {
             if (jogadorAtual == Cor.Branca)

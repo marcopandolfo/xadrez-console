@@ -30,8 +30,7 @@ namespace xadrez
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
-                if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
-                    break;
+                if (tab.peca(pos) != null && tab.peca(pos).cor != cor) break;
 
                 pos.linha = pos.linha - 1;
             }
@@ -41,8 +40,7 @@ namespace xadrez
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
                 mat[pos.linha, pos.coluna] = true;
-                if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
-                    break;
+                if (tab.peca(pos) != null && tab.peca(pos).cor != cor) break;
 
                 pos.linha = pos.linha + 1;
             }
@@ -55,7 +53,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.coluna + 1;
+                pos.coluna = pos.coluna + 1;
             }
 
             // esquerda
@@ -66,7 +64,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.linha - 1;
+                pos.coluna = pos.coluna - 1;
             }
 
             return mat;
